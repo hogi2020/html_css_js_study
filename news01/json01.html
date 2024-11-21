@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const ajax = new XMLHttpRequest();
+        // open 함수는 Request를 초기화하고, 동기/비동기 여부를 지정합니다.
+        // send 함수는 요청을 전송하는 역할을 합니다.
+        ajax.open("GET", "https://api.hnpwa.com/v0/news/1.json", false);
+        ajax.send();
+
+        const result = JSON.parse(ajax.response);
+        
+        for (let i=0; i<10; i++) {
+            document.write(`제목 | ${result[i].title}, 
+                            ID | ${result[i].id}, 
+                            시간 | ${result[i].time_ago}<br/>`);
+        }
+    </script>
+</body>
+</html>

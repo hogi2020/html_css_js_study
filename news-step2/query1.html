@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>특정 Key의 Query String값</title>
+</head>
+<body>
+    <script>
+        //-> http://localhost:3000/XXXX?query=자바의정석 엔터한다.
+        //-> http://localhost:3000/XXXX?name=바나나 엔터한다.
+        const query = window.location.search;
+        console.log(query)
+        console.log(decodeURIComponent(query))//한글 깨짐 처리
+    </script>
+</body>
+</html>

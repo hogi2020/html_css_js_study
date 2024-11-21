@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //-> http://localhost:3000/XXXX?title=바나나&age=30 엔터한다.
+        //http://127.0.0.1:5500/news-step2/query2.html?title=%EB%A6%AC%EC%95%A1%ED%8A%B8%EC%9D%98%EC%A0%95%EC%84%9D&age=53
+        //사용자가 입력한 값을 자바스크립트로 읽어올 수 있다. - 가능하므로 백엔드 처리할 수 있는 것이다.
+        const query = window.location.search;
+        const urlParams = new URLSearchParams(query);
+        const age = urlParams.get("age")
+        const title = urlParams.get("title")
+        document.write("age : "+age +"\n")
+        document.write("title : " +title + "\n")
+        //console.log(decodeURIComponent(query))//한글 깨짐 처리
+    </script>
+</body>
+</html>
