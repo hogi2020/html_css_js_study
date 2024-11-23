@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>특정 key의 Query</title>
+</head>
+<body>
+    <script>
+        // ENTER -> http://localhost:5502/news02/query.html?title=바나나&age=30
+        function getQuery() {
+            const query = window.location.search   // 현재 URL의 ? 뒤의 문자열을 반환
+            const urlParams = new URLSearchParams(query)   // 쿼리문자열을 파싱함
+            const params = {}
+
+            // Json 형태로 바꾸는 함수
+            for(let [key, value] of urlParams) {
+                if(params[key]) {
+                    if(Array.isArray(params[key])) {
+                        params[key].push(value)  // params의 value가 배열이 아니면 동작
+                    } else {
+                        params[key] = [params[key], value]  // params key에 value를 더함
+                    }
+                } else {
+                    params[key] = value
+                }
+            }
+            return params
+        }
+
+        const queryParams = getQuery()
+        document.write(queryParams)
+        console.log(queryParams);
+    </script>
+</body>
+</html>
