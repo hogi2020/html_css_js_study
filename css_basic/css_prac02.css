@@ -1,0 +1,28 @@
+* {
+    margin: 10px;
+}
+
+h1 {
+    color: blue;
+    background-color: pink;
+}
+
+p > span {
+    color: red;
+}
+
+p[class="highlight"] {
+    color: green;
+}
+
+span {
+    background-color: yellow;
+}
+
+strong {
+    color: rebeccapurple;
+}
+
+em {
+    color: rebeccapurple;
+}

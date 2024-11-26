@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+    border: 1px solid;
+}
+
+
+p, ul {
+    border: 2px solid greenyellow;
+    padding: .5em;
+}
+
+.block {
+    display: block;
+}
+
+.block, li {
+    border: 2px solid skyblue;
+    padding: .5em;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
