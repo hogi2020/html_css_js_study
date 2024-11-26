@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <title>해커뉴스 - 비동기처리</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+        // innerText로 태그가 있는 문자열을 삽입하면 h1태그가 그대로 찍힘.
+        // document.querySelector("#root").innerHTML = "<h1>안녕<h1>"
+        $("#root").html("<h1>키위는 맛없어<h1>")
+        $("#root").text("<h1>짱구는 못말려</h1>")
+    </script>
+</body>
+</html>

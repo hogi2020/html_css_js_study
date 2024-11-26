@@ -1,0 +1,29 @@
+* {
+    border: 1px solid yellowgreen;
+    box-sizing: border-box;
+}
+
+body {
+    border: 10px solid yellowgreen;
+    height: 200px;
+    width: 500px;
+}
+
+p, ul {
+    border: 2px solid rebeccapurple;
+}
+
+span, li {
+    border: 2px solid hotpink;
+}
+
+ul {
+    display: inline-flex;
+    list-style: none;
+    padding: 5px;
+}
+
+.inline {
+    /* inline-flex를 사용하면 인라인 요소로 바뀜 */
+    display: inline-flex;
+}

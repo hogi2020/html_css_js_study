@@ -9,6 +9,11 @@ p, ul {
     padding: .5em;
 }
 
+ul {
+    display: flex;
+    list-style: none;
+}
+
 .block {
     display: block;
 }
@@ -16,9 +21,4 @@ p, ul {
 .block, li {
     border: 2px solid skyblue;
     padding: .5em;
-}
-
-ul {
-    display: flex;
-    list-style: none;
 }
